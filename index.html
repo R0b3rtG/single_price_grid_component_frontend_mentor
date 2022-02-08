@@ -1,222 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap"
+			rel="stylesheet"
+		/>
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="32x32"
+			href="./images/favicon-32x32.png"
+		/>
+		<link rel="stylesheet" href="style.css" />
+		<title>Frontend Mentor | Single Price Grid Component</title>
+	</head>
+	<body>
+		<main>
+			<section class="box-1">
+				<h1 class="t-1">Join our community</h1>
 
-  <link href="https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap" rel="stylesheet">
+				<h2 class="sec-t-1">30-day, hassle-free money back guarantee</h2>
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Single Price Grid Component</title>
+				<p class="p-1">
+					Gain access to our full library of tutorials along with expert code
+					reviews. Perfect for any developers who are serious about honing their
+					skills.
+				</p>
+			</section>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    *{
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+			<section class="box-2">
+				<h1 class="t-2">Monthly Subscription</h1>
 
-    body{
-      background: hsl(204, 43%, 93%);
-      font-family: 'Karla', sans-serif;
-      display: grid;
-      place-content: center;
-      min-height: 100vh;
-      width: 100vw;
-      padding: 3rem 0;
-    }
+				<h2 class="sec-t-2">
+					<span class="span-1">&dollar;29</span
+					><span class="span-2"> per month</span>
+				</h2>
 
-    main{
-      width: 310px;
-      box-shadow: 0 7px 20px 5px rgba(0, 0, 0, .15);
-      border-radius: 10px;
-      overflow: hidden;
-    }
+				<p class="p-2">Full access for less than &dollar;1 a day</p>
 
-    .box-1,
-    .box-2,
-    .box-3{
-      padding: 1.5rem;
-      width: 100%;
-    }
+				<a href="#" class="btn">Sign Up</a>
+			</section>
 
-    .box-1{
-      background: #fff;
-    }
+			<section class="box-3">
+				<h1 class="t-3">Why Us</h1>
 
-    .t-1{
-      font-size: 1.4rem;
-      color: hsl(179, 62%, 43%);
-      margin-bottom: 1.5rem;
-    }
-
-    .sec-t-1{
-      font-size: 1rem;
-      color: hsl(71, 73%, 54%);
-      margin-bottom: 1.5rem;
-    }
-
-    .p-1{
-      color: hsl(218, 22%, 67%);
-      font-size: .8rem;
-      line-height: 1.5rem;
-    }
-
-    .box-2{
-      color: #fff;
-      background: hsl(179, 62%, 43%);
-    }
-
-    .t-2{
-      font-size: 1.3rem;
-      margin-bottom: 1.5rem;
-    }
-
-    .sec-t-2{
-      display: flex;
-      align-items: center;
-      margin-bottom: .3rem;
-    }
-
-    .sec-t-2 .span-1{
-      font-size: 2rem;
-      font-weight: 700;
-      margin-right: .7rem;
-    }
-
-    .sec-t-2 .span-2{
-      font-size: 1rem;
-      font-weight: 400;
-      color:hsl(204, 43%, 93%);
-    }
-    
-    .p-2{
-      font-weight: 400;
-      color: hsl(204, 43%, 93%);
-      margin-bottom: 1rem;
-    }
-
-    .btn{
-      display: inline-block;
-      text-decoration: none;
-      border: none;
-      color: hsl(204, 43%, 93%);
-      font-weight: 700;
-      background: hsl(71, 73%, 54%);
-      width: 100%;
-      padding: .7rem 0;
-      text-align: center;
-      border-radius: 7px;
-      box-shadow: 0 7px 20px 5px rgba(0, 0, 0, .15);
-      transition: background 500ms;
-    }
-
-    .btn:hover{
-      background: hsl(71, 73%, 45%);
-    }
-
-    .box-3{
-      color: #fff;
-      background: hsl(179, 50%, 52%);
-      margin-right: .5rem;
-    }
-
-    .t-3{
-      font-size: 1.3rem;
-      margin-bottom: 1.3rem;
-    }
-
-    .p-3{
-      list-style: none;
-      font-weight: 400;
-      line-height: 1.3rem;
-      font-size: .9rem;
-    }
-
-    @media(max-width: 280px){
-      main{
-        width: 270px;
-      }
-    }
-
-    @media(min-width: 1000px){
-      main{
-        display: grid;
-        width: 700px;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 1fr 1fr;
-      }
-
-      .box-1{
-        grid-column: 1 / span 2 ;
-      }
-
-      .box-1,
-      .box-2,
-      .box-3{
-        padding: 2.5rem;
-      }
-
-      .p-1{
-        font-size: 1rem;
-        margin: 0;
-      }
-
-      .t-1,
-      .sec-t-1{
-        margin-bottom: 3rem;
-      }
-
-      .sec-t-1{
-        font-size: 1.3rem;
-      }
-
-      .sec-t-2{
-        margin-bottom: 1rem;
-      }
-
-      .p-2{
-        margin-bottom: 2rem;
-      }
-    }
-  </style>
-</head>
-<body>
-  <main>
-    <section class="box-1">
-      <h1 class="t-1">Join our community</h1>
-      
-      <h2 class="sec-t-1">30-day, hassle-free money back guarantee</h2>
-      
-      <p class="p-1">Gain access to our full library of tutorials along with expert code reviews. 
-      Perfect for any developers who are serious about honing their skills.</p>
-    </section>
-      
-    <section class="box-2">
-      <h1 class="t-2">Monthly Subscription</h1>
-      
-      <h2 class="sec-t-2"><span class="span-1">&dollar;29</span><span class="span-2"> per month</span></h2>
-      
-      <p class="p-2">Full access for less than &dollar;1 a day</p>
-      
-      <a href="#" class="btn">Sign Up</a>
-    </section>
-    
-    <section class="box-3">
-      <h1 class="t-3">Why Us</h1>
-      
-      <ul class="p-3">
-        <li><p class="p-3-1">Tutorials by industry experts</p></li>
-        <li><p class="p-3-2">Peer &amp; expert code review</p></li>
-        <li><p class="p-3-3">Coding exercises</p></li>
-        <li><p class="p-3-4">Access to our GitHub repos</p></li>
-        <li><p class="p-3-5">Community forum</p></li>
-        <li><p class="p-3-6">Flashcard decks</p></li>
-        <li><p class="p-3-7">New videos every week</p></li>
-      </ul>
-    </section>
-  </main>
-</body>
+				<ul class="p-3">
+					<li><p class="p-3-1">Tutorials by industry experts</p></li>
+					<li><p class="p-3-2">Peer &amp; expert code review</p></li>
+					<li><p class="p-3-3">Coding exercises</p></li>
+					<li><p class="p-3-4">Access to our GitHub repos</p></li>
+					<li><p class="p-3-5">Community forum</p></li>
+					<li><p class="p-3-6">Flashcard decks</p></li>
+					<li><p class="p-3-7">New videos every week</p></li>
+				</ul>
+			</section>
+		</main>
+	</body>
 </html>

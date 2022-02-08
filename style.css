@@ -1,0 +1,169 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	background: hsl(204, 43%, 93%);
+	font-family: 'Karla', sans-serif;
+	display: grid;
+	place-content: center;
+	min-height: 100vh;
+	width: 100vw;
+	padding: 3rem 0;
+}
+
+main {
+	width: 310px;
+	box-shadow: 0 7px 20px 5px rgba(0, 0, 0, 0.15);
+	border-radius: 10px;
+	overflow: hidden;
+}
+
+.box-1,
+.box-2,
+.box-3 {
+	padding: 1.5rem;
+	width: 100%;
+}
+
+.box-1 {
+	background: #fff;
+}
+
+.t-1 {
+	font-size: 1.4rem;
+	color: hsl(179, 62%, 43%);
+	margin-bottom: 1.5rem;
+}
+
+.sec-t-1 {
+	font-size: 1rem;
+	color: hsl(71, 73%, 54%);
+	margin-bottom: 1.5rem;
+}
+
+.p-1 {
+	color: hsl(218, 22%, 67%);
+	font-size: 0.8rem;
+	line-height: 1.5rem;
+}
+
+.box-2 {
+	color: #fff;
+	background: hsl(179, 62%, 43%);
+}
+
+.t-2 {
+	font-size: 1.3rem;
+	margin-bottom: 1.5rem;
+}
+
+.sec-t-2 {
+	display: flex;
+	align-items: center;
+	margin-bottom: 0.3rem;
+}
+
+.sec-t-2 .span-1 {
+	font-size: 2rem;
+	font-weight: 700;
+	margin-right: 0.7rem;
+}
+
+.sec-t-2 .span-2 {
+	font-size: 1rem;
+	font-weight: 400;
+	color: hsl(204, 43%, 93%);
+}
+
+.p-2 {
+	font-weight: 400;
+	color: hsl(204, 43%, 93%);
+	margin-bottom: 1rem;
+}
+
+.btn {
+	display: inline-block;
+	text-decoration: none;
+	border: none;
+	color: hsl(204, 43%, 93%);
+	font-weight: 700;
+	background: hsl(71, 73%, 54%);
+	width: 100%;
+	padding: 0.7rem 0;
+	text-align: center;
+	border-radius: 7px;
+	box-shadow: 0 7px 20px 5px rgba(0, 0, 0, 0.15);
+	transition: background 500ms;
+}
+
+.btn:hover {
+	background: hsl(71, 73%, 45%);
+}
+
+.box-3 {
+	color: #fff;
+	background: hsl(179, 50%, 52%);
+	margin-right: 0.5rem;
+}
+
+.t-3 {
+	font-size: 1.3rem;
+	margin-bottom: 1.3rem;
+}
+
+.p-3 {
+	list-style: none;
+	font-weight: 400;
+	line-height: 1.3rem;
+	font-size: 0.9rem;
+}
+
+@media (max-width: 280px) {
+	main {
+		width: 270px;
+	}
+}
+
+@media (min-width: 1000px) {
+	main {
+		display: grid;
+		width: 700px;
+		grid-template-columns: 1fr 1fr;
+		grid-template-rows: 1fr 1fr;
+	}
+
+	.box-1 {
+		grid-column: 1 / span 2;
+	}
+
+	.box-1,
+	.box-2,
+	.box-3 {
+		padding: 2.5rem;
+	}
+
+	.p-1 {
+		font-size: 1rem;
+		margin: 0;
+	}
+
+	.t-1,
+	.sec-t-1 {
+		margin-bottom: 3rem;
+	}
+
+	.sec-t-1 {
+		font-size: 1.3rem;
+	}
+
+	.sec-t-2 {
+		margin-bottom: 1rem;
+	}
+
+	.p-2 {
+		margin-bottom: 2rem;
+	}
+}
